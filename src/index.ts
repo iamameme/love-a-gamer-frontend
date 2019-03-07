@@ -8,6 +8,7 @@ import { updateTheme } from 'utils/theme';
 import { Screens, startApp } from 'screens';
 import { UIStore } from 'stores/UIStore';
 import { CounterStore } from 'stores/CounterStore';
+import { UserStore } from 'stores/UserStore';
 
 // Register screens
 Screens.forEach((ScreenComponent, key) => Navigation.registerComponent(key, () => ScreenComponent));
@@ -16,6 +17,7 @@ Screens.forEach((ScreenComponent, key) => Navigation.registerComponent(key, () =
 if (__DEV__) {
   makeInspectable(UIStore);
   makeInspectable(CounterStore);
+  makeInspectable(UserStore);
 }
 
 // Start application
